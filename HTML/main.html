@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width", initial-scale=1">
+<title>devVisit</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+* {
+  box-sizing: border-box;
+}
+.bar2{
+margin: -3px 5px;
+  transition: 0.4s;
+}
+
+.change .bar2 {
+  -webkit-transform: rotate(-180deg) translate(-6px,6px);
+  transform: rotate(180deg) translate(-3px, 0px);
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 5px;  
+  border: none;
+  outline: none;
+  color: rgba(0, 0, 0, .67);
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+.dropdown:hover .dropbtn {
+  background-color: white;
+  color:#4d90fe;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 2px 6px 0px rgba(.12,.12,.12,.12);
+  z-index: 1;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column3 {
+  float: left;
+  width: 22%;
+  padding: 10px;
+  background-color: white;
+  height: 270px;
+  margin-left :30px;
+}
+
+.column3 a  {
+  float: none;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column3 a:hover {
+color:#4d90fe;
+  background-color:white ;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+<body>
+<script src="script.js"></script>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Tab links -->
+<div class="tab">
+<button class="tablinks" onclick="openNav()">
+<div class="bar1"></div>
+<div class="bar1"></div>
+<div class="bar1"></div></button>
+<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen"> <i class="fa fa-fw fa-home"></i> Home</button>
+<button class="tablinks" onclick="openCity(event, 'log')">News</button>
+
+  <div class="dropdown" onmouseenter="myFunction(this)" onmouseleave="myFunction(this)">
+  <button class="dropbtn">Dropdown 
+      <img class="bar2" src="https://image.flaticon.com/icons/svg/25/25623.svg" width="15px">
+  </button>
+    
+    <div class="dropdown-content">
+      <div class="row">
+      
+        <div class="column3">
+          <h3 >Category 1</h3>
+          <a href="#">C programing</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+        </div>
+        
+        <div class="column3">
+          <h3 >Category 2</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        
+        <div class="column3">
+          <h3>Category 3</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        
+         <div class="column3">
+          <h3>Category 4</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <button class="tablinks" onclick="openCity(event, 'cloud')">Cloud</button>
+  <button class="tablinks" onclick="openCity(event, 'log')">Blogs</button>
+  <button class="tablinks" onclick="openCity(event, 'play')" >Google Play</button>
+  <button class="tablinks" onclick="openCity(event, 'Google Assistant')">Google Assistant</button>
+  <button class="tablinks" onclick="openCity(event, 'Android Dev Summit 2019')">Android Dev</button>
+  <button class="tablinks" onclick="openCity(event, 'Google I/O 19')">Google I/O 19</button>
+  <button class="tablinks" onclick="openCity(event, 'Register')">Register</button>
+  <button class="tablinks" onclick="document.getElementById('myOverlay').style.display='block'"><i class="fa fa-fw fa-search"></i>Search</button>
+  <button class="tablinks">
+   <div><a style="font-size:15px;text-decoration:none;color:rgba(0, 0, 0, .67);" href="https://www.facebook.com/devvisit.india.9" class="fa fa-facebook"></a></div></button>
+   <button class="tablinks">
+   <div><a style="font-size:15px;text-decoration:none;color:rgba(0, 0, 0, .67); " href="https://twitter.com/DevVisit" class="fa fa-twitter"></a></div></button>
+  <button class="tablinks" onclick="openCity(event, 'contact')"><i class="fa fa-fw fa-envelope"></i> Contact</button>
+  <button class="tablinks" onclick="document.getElementById('id01').style.display='block'"> <i class="fa fa-fw fa-user"></i> Login</button>
+ <button class="tablinks" onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-fw fa-user"></i> Signup</button>
+
+</div>
+
+<div class="gside">
+<div id="gmySidenav" class="gsidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"onclick="openCity(event, 'About')">About</a>
+  <a href="#" onclick="openCity(event, 'log')">Blog</a>
+  <a href="#"onclick="openCity(event, 'About')">Project</a>
+  <a href="#"onclick="openCity(event, 'c ontact')">Contact</a>
+<a href="#"onclick="openCity(event, 'Register')">Register</a>
+</div></div>
+
+<div id="myOverlay" class="overlay">
+  <span onclick="document.getElementById('myOverlay').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+  <div class="overlay-content">
+    <form  class="modal-content animate" +action="action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+<form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar" height="160">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button style="text-align:center;" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+  
+    </div>
+  </form>
+</div>
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <form action="signup.php" method="POST" style="border:1px solid #ccc">
+<div class="container" style="background-color:#f1f1f1">
+<h2> Subscribe To Get Daily Notification And Updates</h2>
+ <table>
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" name="username" required></td>
+   </tr>
+   <tr>
+    <td>Password :</td>
+    <td><input type="password" name="password" required></td>
+   </tr>
+   <tr>
+    <td>Gender :</td>
+    <td>
+     <input type="radio" name="gender" value="m" required>Male
+     <input type="radio" name="gender" value="f" required>Female
+    </td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email" name="email" required></td>
+   </tr> 
+   <tr>
+    <td>Phone no :</td>
+    <td>
+     <select name="phoneCode" required>
+      <option selected hidden value="">Select Code</option>
+      <option value="+91">+91</option>
+      <option value="+1">+1</option>
+      <option value="+61">+61</option>
+      <option value="+44">+44</option>
+      <option value="+86">+86</option>
+      <option value="+65">+65</option>
+     </select>
+     <input type="phone" name="phone" required>
+    </td>
+   </tr>
+   </table>
+<p>By subscribing you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+ <div class="clearfix">
+   
+   <button type="submit" class="signupbtn">Submit</button>
+    <a href="main.html"><button type="button" class="cancelbtn">Cancel</button></a>
+   </tr>
+</div>
+
+
+     
+
+  </div>
+ </form>
+
+</div>
+
+<div id="contact" class="tabcontent">
+<div class="container1">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</div>
+
+
+<div id="play" class="tabcontent">
+  <div class="io">
+  <h1 style="text-align:left;"><br><br>Celebrating app makers worldwide</h1>
+<em>Posted by Kobi Glick, Product Lead, Google Play</em><br><p>    </p>
+<img src="app.jpg" class="center1">
+<p><em>May 7-9 | Mountain View, CA, USA<br></em></p>
+<div class="io">
+<p><br>With the ability to publish rapidly to over <strong style="color:#4d90fe;" > 2 billion active Android devices</strong>, Google Play helps you grow a global audience for your apps and games and earn revenue.<br>
+Meet some of the most amazing people who create apps & games. Founders, product managers, designers and developers from around 
+the world reveal what they do when they step away from their desks and computers. Watch the stories, share yours and get featured.</p>
+<h2>Upcoming target API level requirement</h2>
+<p>Google Play will require that new apps target at least<strong style="color:#4d90fe;" > Android 8.0 </strong>(API level 26) from August 2018, and that app updates target Android 8.0 from November 2018.<br>
+Back in March we opened submissions for the Indie Games Showcase, an international competition for games studios from Europe*, South Korea, and Japan who are constantly pushing the boundaries of storytelling, visual excellence, and creativity in.</p>
+<h2>#IMakeApps</h2>
+<p>Many developers are increasingly focused on growing their businesses globally, and there were more than<strong style="color:#4d90fe;" > 94 billion apps downloaded</strong> from Google Play in the last year, reaching more than 190 countries. The regulatory environment is frequently changing.<br>
+Focus on what is right for your app and learn how Google can help you to do more for your audience.</p>
+<img src="app1.jpg" class="center1">
+<br><h2>Google Play Console</h2>
+<p>When you publish on<strong style="color:#4d90fe;" > Google Play</strong>, you put your apps in front of over 1 billion active Android users, in more than 190 countries and territories around the world. Google Play helps you get discovered, earn revenue, and build a global business.
+Mobills is a free to download app which helps users manage their finances. Learn how Mobills were able to grow their revenue and their subscriber
+</div>
+</div>
+</div>
+
+<div id="Google I/O 19" class="tabcontent">
+  <div class="io">
+  <h1 style="text-align:left;"><br><br>I/O 2019: New features to help you develop, release, and grow</h1>
+<em>Posted by Kobi Glick, Product Lead, Google Play</em><br><p>    </p>
+<img src="io.png" class="center1">
+  <p><em>May 7-9 | Mountain View, CA, USA<br></em></p>
+<div class="io">
+<p><br>
+Join us for this year's developer festival from May 7-9 at Shoreline Amphitheatre. I/O brings together developers
+ from around the globe for talks, hands-on learning with Google experts, and a first look at Google latest developer products.</p>
+<p>Over the last 10 years, we've worked together to build an incredible ecosystem with more than 2.5 billion active users in over 190 countries.
+ This would not be possible without you and all the fantastic apps and games you've built that entertain, help, and educate people around the world.<br><br>
+Every month, you upload more than 750,000 APKs and <strong style="color:#4d90fe">app bundles</strong> to the Play Console. We've been amazed by your enthusiasm,
+ and it's been our privilege to help you grow your business. This year, we want to help you go even further. So today at Google I/O,
+ we're announcing new tools and features to help you develop, release, and grow your apps and games-many of them based on your feedback and suggestions.<p>
+<h2>Efficient, modular apps and customizable feature delivery</h2>
+<p>Last year we introduced Android's new publishing format, the Android App Bundle, and an entirely new dynamic delivery framework on Google Play. There are now over 
+80,000 apps and games using app bundles in production, with an average size savings of 20%. As a result of those savings, apps have seen up to 11% install uplift.
+ As the future of app delivery, we're excited to share these latest enhancements to the Android App Bundle.</p>
+<ul>
+
+<li>On-demand delivery - install features when they're needed or in the background, instead of delivering them at install time, and reduce the size of your app.
+
+</li><li>Conditional delivery - control which parts of your app to deliver at the time of install based on the user's country, device features, or minimum SDK version. 
+
+</li><li>Instant experiences - now fully supported, so you only need to upload one artifact for your installed app and Google Play Instant experiences.
+</li>
+</ul>
+<p>During our beta program, many developers implemented interesting use cases with dynamic features. Netflix, for example, now delivers their customer
+ support functionality as a dynamic feature to users who visit the support center. By making functionality available only to users who need it, 
+Netflix reported a 33% reduction in app size. You can learn more in the video below<p>
+  <span onclick="this.parentElement.style.display='defaultOpen'"  style="text-align: center;color:#4d90fe;" > back to home page </span> 
+</div>
+</div>
+</div>
+
+<div id="Android Dev Summit 2019" class="tabcontent">
+  <div class="io">
+  <h1 style="text-align:left;"><br><br>Chrome Developer Summit is back!</h1>
+<em>Posted by Kobi Glick, Product Lead, Google Play</em><br><p>    </p>
+<img src="summit.jpg" class="center1">
+<p><em>October 23-24 | Sunnyvale, CA, USA<br>Join us for two days of deep technical 
+sessions from, and networking with, the Android engineering team<br></em></p>
+<div class="io">
+<p><br>Chrome Dev Summit is back! Join us for our annual developer conference at the Yerba Buena Center for the Arts in San Francisco, CA on 11-12 November 2019.
+
+Over two days, you'll learn about the latest tools and updates coming to the web platform and hear directly from the Chrome product engineering teams.
+
+Sign up for updates on the<strong style="color:#4d90fe"> interest form</strong>.</p>
+<h2>Prayer Room & Mother's Room</h2>
+<p>We will have a prayer room and Mother's Room available onsite throughout the event. If you are interested in utilizing these spaces, please ask any registration staff member when you check in to learn more.</p>
+<h2>Accessibility Accommodations</h2>
+<p>If you have any accessibility accommodation needs, please let us know by emailing <strong style="color:#4d90fe">chrome-dev-summit@google.com</strong>. We will provide live captioning services in the general sessions.</p>
+ <img src="map.png" class="center1">
+<h2>Nearby Hotels</h2>
+<ul class="io">
+<li>St. Regis San Francisco: 250m / 820ft</li>
+<li>W San Francisco: 140m / 460ft</li>
+<li>Four Seasons Hotel: .5km / .3mi</li>
+<li>San Francisco Marriott Marquis: .5km / .3mi</li>
+</ul>
+<h2>Public Transport</h2>
+<p class="io">The venue is easily accessible by public transportation, including:</p>
+<ul>
+<li>BART - Powell St. and Montgomery St. stations. For detailed directions, visit 511.org</li>
+<li>Muni - Powell St. and Montgomery St. stations</li>
+<li>Caltrain - San Francisco station</li></ul>
+<h2>ByCar</h2>
+<ul>
+<li>Fifth & Mission / Yerba Buena Garage - 833 Mission Street</li>
+<li>Museum of Modern Art Lot - 147 Minna Street</li>
+<li>Hearst Parking Center - 45 3rd Street</li>
+<li>Moscone Center Garage - 255 3rd Street</li></ul>
+<span onclick="this.parentElement.style.display='home'" style="color:#4d90fe;" > back to home page</span> 
+</div></div></div>
+
+
+<div id="cloud" class="tabcontent"><div class="io">
+  <h1 style="text-align:left;"><br><br>Building a multi-cloud ecosystem</h1>
+<em>Posted by Kobi Glick, Product Lead, Google cloud</em><br><p>    </p>
+  <img src="gcp.png" class="center1">
+  <p><em>April 9, 2019  VP, Engineering, Google Cloud<br></em></p>
+<div class="io">
+  <p style="text-align:left;">Global enterprise customers in a number of industries are already using Anthos as a flexible, portable, 
+software-based solution on which to build hybrid and multi-cloud environments.<h2>Early Anthos customer success stories</h2>Many of our customers have existing 
+software and infrastructure investments, yet still want the freedom to invest in their cloud future. We're working closely with our ecosystem of partners to 
+support these customers, launching with more than 30 hardware, software and system integration partners ready to help customers leverage Anthos right out of 
+the gate.<br>Using Anthos, Cisco will deliver the freedom of hybrid to enterprise customers, helping them get up and running quickly in the cloud based 
+on integrations between Anthos and Cisco's data center, networking, and security technologies, including Cisco HyperFlex, Cisco ACI, and Cisco Stealthwatch 
+Cloud and Cisco SD-WAN. This combination offers businesses all the benefits of a fully-managed service like GKE combined with Cisco's infrastructure capabilities.
+
+</p></div></div></div>
+
+<div id="Google Assistant" class="tabcontent"><div class="io">
+  <h1 style="text-align:left;"><br><br>Google Assistant Developer Community Program</h1>
+<em>Posted by Kobi Glick, Product Lead, Google Play</em><br><p>    </p>
+  <img src="aaaa.jpg" class="center1">
+  <p><em>May 7-9 | Mountain View, CA, USA<br></em></p>
+<div class="io">
+  <p style="text-align:left;">When you publish an Action for the Google Assistant, you'll be invited to join 
+our developer community program and receive an Assistant t-shirt, plus up to $200 in Google Cloud credit each month for one year. Hit certain product milestones 
+and you'll be eligible for Google Home devices, invitations to exclusive events, mentorship by Googlers, and other rewards!<br>
+We want to thank you for building great Actions for the Google Assistant! To support your efforts and celebrate your accomplishments,
+ we put together an ever-improving program with benefits and incentives that are tied to specific milestones.</p>
+<h2>Publishing your first Action</h2>
+<p>Making your first Action for the Google Assistant available to users is definitely something worth throwing a party for, and to kick off the celebrations
+ we'll invite you to join our growing Google Assistant developer community:</p>
+<ul>
+<li>To welcome you to our developer community, we'll send you an exclusive Google
+Assistant t-shirt. Make sure to wear it when you meet our team at events around
+the world.</li>
+<li>To support your efforts, we'll also credit the account associated with your
+Action with up to $200 of Google Cloud services a month (applicable to any <strong style="color:#4d90fe;" >Firebase
+plan</strong>)- for a full year!</li>
+</ul>
+<p>Don't know what to build yet? See Actions other folks have built in our directory. You can also use our templates which can help you have an Action 
+ready in a matter of hours. Check out our docs and log on to the <strong style="color:#4d90fe;" >Actions Console </strong> to start building your Action.</p>
+<span onclick="this.parentElement.style.display= id='Home'" style="color:#4d90fe;" > back to home page</span> 
+</div></div></div>
+
+<div id="Register" class="tabcontent" style="text-align:center;">
+<p>   <br></p>
+   <form style="text-align:center;">  
+     <fieldset>  
+        <legend>User personal information</legend>  
+        <label>Enter your full name</label><br>  
+        <input type="text" name="name"><br>  
+         <label>Enter your email</label><br>  
+         <input type="email" name="email"><br>  
+         <label>Enter your password</label><br>  
+         <input type="password" name="pass"><br>  
+         <label>confirm your password</label><br>  
+         <input type="password" name="pass"><br>  
+         <br><label>Enter your gender</label><br>  
+         <input type="radio" id="gender" name="gender" value="male"/>Male  <br>  
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/>    
+         <input type="radio" id="gender" name="gender" value="others"/>others <br/>   
+          <br>Enter your Address:<br>  
+         <textarea></textarea><br>  
+         <input type="submit" value="sign-up">  
+     </fieldset>  
+</div>
+
+<div id="log" class="tabcontent">
+<div class="white">
+  <div class="header"><p> </p>
+  <img height="60" src="https://lh4.googleusercontent.com/proxy/w55Ib4qOQ6b-l6hOP-RnD-CXwb4T_M3Hc797PBOZAm4Qi9SQbNaO8TA3CXhbVOuH5A4kXa-w1WFOY66QVf8zcXJN-Ndf6WNbYe8tP-oAyAs=s0-d">
+  <div class="header-desc">
+<p style="font-size:18px;" class="io">Blog of our latest news, updates, and stories for developers</p>
+</div>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+
+    <div class="card">
+     <div class="io"> <h2>Google Pay launches new, dynamic features for Online Payments and Passes APIs</h2>
+      <em>Tuesday, 4 June, 2019</em><p></p>
+      <div class="container5">
+     <img  src="image1.jpg" alt="Notebook" width="700" height="400" >
+     <h3 style="text-align:left;">Google Pay:</h3>
+    <p>Better checkout experiences are more likely to increase your conversions. Here's a look at some of the ways<strong style="color:#4d90fe;"> Google Pay</strong> can help 
+you improve your checkout process from start to finish.<br>In an effort to bring customers more detail and transparency, we've made some changes to the Google Pay API.
+ Going forward, the Google Pay payment sheet will display pricing information, so customers can double-check their order before they confirm their purchase. We're also adding modifiers based on transaction conditions (like shipping options), so customers can see all relevant purchase details quickly, </p>
+    </div>
+    </div><br>
+      <a style="text-decoration :none;"href="https://developers.googleblog.com"><strong style="color:#4d90fe;"> Read More...</strong></a>
+    </div>
+
+    <div class="card">
+     <div class="io"> <h2>Increasing Diversity: Cloud Study Jam for Women Techmakers in Europe</h2>
+      <em>Thursday, May 16, 2019<br></em><p></p>
+      <div class="container5">
+     <img  src="image2.png" alt="Notebook" width="700" height="400" >
+    <h3 style="text-align:left;">Increasing Diversity:</h3>
+    <p>GDGs form one pillar of our community programs. One of the other cornerstones is the Women 
+    Techmakers program with which we engage and involve organizers interested in increasing diversity worldwide. Cloud Study Jams in the local groups, with dedicated Women Techmakers, 
+    seemed like the most natural fit for us. And, as we soon realized, so thought the organizers.</p>
+    </div>
+    </div><br>
+      <a style="text-decoration :none;"href="https://developers.googleblog.com"><strong style="color:#4d90fe;"> Read More...</strong></a>
+    </div>
+
+    <div class="card">
+     <div class="io"> <h2>Developer Student Clubs - Apply to be a Lead today. Deadline extended to June 15!</h2>
+      <em>Monday, June 3, 2019<br></em><p></p>
+      <div class="container5">
+     <img  src="image3.jpg" alt="Notebook" width="700" height="400" >
+    <h3 style="text-align:left;">Developer Student Clubs:</h3>
+    <p>This spring, Google and Developer Student Clubs are looking for new passionate student leaders from universities across the globe!
+
+Developer Student Clubs is a program with Google Developers. Through in-person meetups, university students are empowered to learn together and use technology to solve real life problems with local businesses and start-ups.
+
+Less than two years ago, DSC launched in parts of Asia and Africa where 90,000+ students have been trained on Google technologies; 
+500+ solutions built for 200+ local startups and organizations and 170+ clubs participated in our first Solution Challenge!</p>
+    </div>
+    </div><br>
+    <a style="text-decoration :none;"href="https://developers.googleblog.com"><strong style="color:#4d90fe;"> Read More...</strong></a>
+    </div>
+
+   <div class="card">
+   <div class="io"> <h2>Coral updates: Project tutorials, a downloadable compiler, and a new distributor</h2>
+   <em>Friday, May 31, 2019<br></em><p></p>
+   <div class="container5">
+   <img  src="image4.jpg" alt="Notebook" width="700" height="400" >
+ <h3 style="text-align:left;">Coral updates:</h3>
+    <p>We're committed to evolving Coral to make it even easier to build systems with on-device AI.
+ Our team is constantly working on new product features, and content that helps ML practitioners, engineers, and prototypers create the next generation of hardware.
+To improve our toolchain, we're making the Edge TPU Compiler available to users as a downloadable binary. The binary works on Debian-based
+ Linux systems, allowing for better integration into custom workflows. Instructions on downloading and using the binary are on the Coral site.</p>
+     </div>
+    </div><br>
+      <a style="text-decoration :none;"href="https://developers.googleblog.com"><strong style="color:#4d90fe;"> Read More...</strong></a>
+    </div>
+
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+     <div class="io">
+      <h2>About Me</h2>
+       <img src="mypic.jpg" alt="profile" width="244" height="292">
+      <p style="font-family: verdana;">Tushar Choudhary<br> Student Of Chandigarh University</p>
+    </div></div>
+    
+    <div class="card">
+      <h3 style="color:rgba(0, 0, 0, .67);">Follow Me</h3>
+      <a style="font-size:20px;text-decoration:none;color:rgba(0, 0, 0, .67);" href="https://www.facebook.com/devvisit.india.9" class="fa fa-facebook">   Facebook</a><br><br>
+      <a style="font-size:20px;text-decoration:none;color:rgba(0, 0, 0, .67); " href="https://twitter.com/DevVisit" class="fa fa-twitter">  Twitter</a>
+    </div>
+  </div>
+</div>
+</div></div>
+
+<div id="About" class="tabcontent">
+<div class="white">
+<hr><br><br>
+<h2 style="text-align:center;color: rgba(0, 0, 0, .67);"><b>"Meet The Team" </h2>
+<br>
+
+<div class="row2">
+  <div class="column2">
+    <div class="card2">
+      <img src="mypic.jpg" alt="Tushar" width="244" height="292">
+      <div class="container2">
+        <h2>Tushar Chaudhary</h2>
+        <p class="title2">CEO & Founder</p>
+        <p>Cofounder of dev visit in conjunction with two other individuals, is instrumental in starting a business, charity or some other enterprise</p>
+        <p>cse.18bcs6523@gmail.com</p>
+        <p><button class="button2">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column2">
+    <div class="card2">
+      <img src="pic1.jpg" alt="Abhishek" width="255" height="292">
+      <div class="container2">
+        <h2>Abhishek Sharma</h2>
+        <p class="title2">Art Director</p>
+        <p>Responsible for the visual style and images in magazines, newspapers, product packaging, and movie and television productions.</p>
+        <p>cse.18bcs6518@gmail.com</p>
+        <p><button class="button2">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column2">
+    <div class="card2">
+      <img src="PRIYA.jpg" alt="PRIYANSHU" width="244" height="292">
+      <div class="container2">
+        <h2>Priyanshu</h2>
+        <p class="title2">Designer</p>
+        <p>Designer at dev Visit <br>
+design webpage layout and styling of text and alignment </p>
+        <p>cse.18bcs6519@gmail.com</p>
+        <p><button class="button2">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="Blog" onclick="openCity(event, 'log')">Blog</a>
+  <a href="#" id="projects" onclick="openCity(event, 'Google Assistant')">Projects</a>
+  <a href="#" id="contact" onclick="openCity(event, 'contact')">contact</a>
+  <a href="#" id="register" onclick="openCity(event, 'Register')">Register</a>
+  <a href="#" id="About" onclick="openCity(event, 'About')">About</a>
+</div>
+
+<div id="Home" class="tabcontent">
+<img id="home-bg-top-right" class="home-amorphous-blob" src="top.svg" alt="">
+<h1 style="text-align:center; color: #212121;font-size:50px"><br>Build. Modernize. Scale.</h1>
+<img src="dev.jpg" class="center"><em>
+<p class="io" ><strong style="color:#4d90fe;" >Google Developer</strong> Join us for this year's developer festival from May 7-9 at
+ Shoreline Amphitheatre. I/O brings together developers from around the globe for talks, hands-on 
+learning with Google experts, and a first look at Google latest developer products.<br><br>
+Google Developers (previously Google Code) is Google's site for software development tools, application programming interfaces (APIs),
+ and technical resources. The site contains documentation on using
+ Google developer tools and APIs including discussion groups and blogs for developers using Google's developer products.<br><br>
+There are APIs offered for almost all of Google's popular consumer products, like Google Maps, YouTube, Google Apps, and others.<br><br>
+The site also features a variety of developer products and tools built specifically for developers. 
+<strong style="color:#4d90fe;" >Google App Engine</strong> is a hosting service for web apps. Project Hosting gives users version control for open source code.
+ Google Web Toolkit (GWT) allows developers to create Ajax applications in the Java programming language.
+The site contains reference information for community based developer products that 
+Google is involved with like Android from the Open Handset Alliance and OpenSocial from the OpenSocial Foundation.<br><br>
+</p></em>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+</html>
