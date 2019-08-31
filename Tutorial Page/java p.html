@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid white;
+  background-color: #f4f7fa;
+  border-left: 5px solid #2196F3;
+  width: 20%;
+  height: 100%;
+position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+padding-top: 7px;
+overflow-x: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: #4d90fe;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  color: #4d90fe;
+font-weight: bold;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: right;
+  padding: 0px 12px;
+  width: 80%;
+  border-left: none;
+  height: 100%;
+}
+.accordion {
+  background-color:white;
+  color: rgba(0,0,0,.67);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion.active1 , .accordion:hover {
+  background-color: #f4f7fa;
+ border-left: 4px solid #2196F3;
+ color: #777;
+  font-weight: bold;
+}
+
+.accordion:after {
+  content: '\2BC6';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active1:after {
+  content: "\2BC5";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  box-shadow: 0px 2px 6px 0px rgba(0,0,.12,.12);
+}
+#myh
+{  color: rgba(0,0,0,.67);
+ padding: 0px 15px;
+}
+.tab span {
+    margin-left : 10px;
+    background-color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #333;
+    font-size: 90%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:#f4f7fa ; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background:#bfe1fd ; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 10px;
+  background:#2196F3; 
+}
+</style>
+</head>
+<body>
+
+<div class="tab">
+<h2 id="myh">JAVA PROGRAMS</h2>
+  <button class="tablinks" onclick="openCity(event, '1')" id="defaultOpen">Basic Programs<span text-align="right">70</span></button>
+  <button class="tablinks" onclick="openCity(event, '2')">Core Java<span text-align="right">49</span></button>
+  <button class="tablinks" onclick="openCity(event, '3')">Popular Programs<span text-align="right">18</span></button>
+  <button class="tablinks" onclick="openCity(event, '4')">Java Pattern<span text-align="right">05</span></button>
+  <button class="tablinks" onclick="openCity(event, '5')">Star Pattern<span text-align="right">05</span></button>
+  <button class="tablinks" onclick="openCity(event, '6')">Number System Conversion<span text-align="right">03</span></button>
+  <button class="tablinks" onclick="openCity(event, '7')">String Programs<span text-align="right">24</span></button>
+  <button class="tablinks" onclick="openCity(event, '8')">Date & Time<span text-align="right">07</span></button>
+  <button class="tablinks" onclick="openCity(event, '9')">Class & Object<span text-align="right">07</span></button>
+  <button class="tablinks" onclick="openCity(event, '10')">Static Variable<span text-align="right">04</span></button>
+  <button class="tablinks" onclick="openCity(event, '11')">Final Variable<span text-align="right">03</span></button>
+  <button class="tablinks" onclick="openCity(event, '12')">File Handling<span text-align="right">26</span></button>
+  <button class="tablinks" onclick="openCity(event, '13')">Java DataInputStream<span text-align="right">04</span></button>
+  <button class="tablinks" onclick="openCity(event, '14')">Java Array<span text-align="right">24</span></button>
+  <button class="tablinks" onclick="openCity(event, '15')">Array List<span text-align="right">11</span></button>
+  <button class="tablinks" onclick="openCity(event, '16')">java swing<span text-align="right">04</span></button>
+  <button class="tablinks" onclick="openCity(event, '17')">Java applet<span text-align="right">03</span></button>
+  <button class="tablinks" onclick="openCity(event, '18')">Java List<span text-align="right">07</span></button>
+  <button class="tablinks" onclick="openCity(event, '19')">Java Recursion<span text-align="right">01</span></button>
+  <button class="tablinks" onclick="openCity(event, '20')">Alogrithms<span text-align="right">01</span></button>
+</div>
+
+<div id="1" class="tabcontent">
+<p></p>
+  <button class="accordion">1. Java program to print "Hello world" (First program in Java).</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">2. How to print different type of values in Java?</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">3. How to read and print an integer value in Java?.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">4. Java program to find sum and average of two integer numbers.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">5. Java Program to find square, cube and square root of a given number.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">6. Java program to check whether input number is EVEN or ODD.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">7. Java program to swap two numbers with and without using third variable.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">8. Java program to print uppercase and lowercase alphabets.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">9. Java program to print Christmas tree.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">10. Java program to print a rectangle using stars (java pattern program).</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">11. Java program to print the diamond shape of stars.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">12. Java program to print pattern of alphabets.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">13. Java program to print Pascal's triangle.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">14. Java program to generate permutation and combination of the numbers.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">15. Java program to print all Armstrong numbers between given range.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">16. Java program to count total positives, negatives and zeros from an array.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dwqolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">17. Java program to find sum of all digits.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">18. Java program to find mean of a given number.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">19. Java program to build a calculator.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">20. Java program to calculate compound interest.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">21. Java program to read strings with different methods.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">22. How to get length of the string in java?</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">23. Java program to validate input as integer value only.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">24.Java program to print spiral pattern of the given input.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">25. Java program to check whether a given character is alphabet or not.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">26. Java program to print pattern of numbers in triangle and reverse trainable form.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">27. Java program to print pattern of numbers in triangle and reverse trainable form.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">28. Java program to convert string to Boolean.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">29. Java program to print ‘W’ pattern using stars.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">30. Java program to count factors of a given number.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">31. Program to verify answers of answer sheets of N students in Java.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">32. Java program to compare two numbers with each other.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+ 
+<button class="accordion">33. Java program to calculate area of Hexagon.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">34. Java program to print prime numbers between given range.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">35. Java program to print patterns (2 Examples based on numbers pattern)</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">36. Java program to find perimeter of a rectangle.</button>
+<button class="accordion">37. Java program to generate random numbers between given ranges.</button>
+<button class="accordion">38. Java program to check whether a given number is ugly number or not.</button>
+<button class="accordion">39. Java program to check whether given number is Kaprekar number or not.</button>
+<button class="accordion">40. Java program to find cube 1 to N.</button>
+<button class="accordion">41. Java program to find the Length of Longest Sequence of 0’s in binary form of a number.</button>
+<button class="accordion">42. Java program to find sum of factorials from 1 to N.</button>
+<button class="accordion">43. Java program to find the correct output of student quiz.</button>
+<button class="accordion">44. Java program to check whether Emrip number.</button>
+<button class="accordion">45. Java program to find occurrences of palindrome words in a string.</button>
+<button class="accordion">46. Java program to count number of notes (rupees) in given amount.</button>
+<button class="accordion">47. Java program to swap first and last character of each word in a string.</button>
+<button class="accordion">48. Java program to read marks between 1 to 100 (An Example of Exceptional Handling).</button>
+<button class="accordion">49. Java program to divide two numbers and catch the exception, if divisor is 0.</button>
+<button class="accordion">50. Java program to handle multiple exceptions.</button>
+<button class="accordion">51. Java program to check Evil number.</button>
+<button class="accordion">52. Java program to check Harshad Number.</button>
+<button class="accordion">53. Java program to check Pronic Number.</button>
+<button class="accordion">54. Java program to check whether the number is IMEI Number or not.</button>
+<button class="accordion">55. Java program to find smallest element in an array.</button>
+<button class="accordion">56. Java program to find second smallest element in an array.</button>
+<button class="accordion">57. Java program to find second largest element in an array.</button>
+<button class="accordion">58. Java program to convert given number of seconds to hours, minutes and second.</button>
+<button class="accordion">59. Java program to swap two numbers using function.</button>
+<button class="accordion">60. Java program to check number is positive, negative or zero.</button>
+<button class="accordion">61. Java program to find largest number among three numbers.</button>
+<button class="accordion">62. Java program to check whether year is Leap year or not.</button>
+<button class="accordion">63. Java program to demonstrate example of enum data type.</button>
+<button class="accordion">64. Java program to demonstrate example of this keyword.</button>
+<button class="accordion">65. Java example for while loop demonstration.</button>
+<button class="accordion">66. Java example for do while loop demonstration.</button>
+<button class="accordion">67. Java - Calculate Compound Interest using Java Program.</button>
+<button class="accordion">68. Java - Greatest Common Divisor or Euclidean Algorithm Program or Highest Common Divisor.</button>
+<button class="accordion">69. Java - Greatest Common Factor or Euclidean Algorithm Program or Highest Common Factor.</button>
+<button class="accordion">70. Java - Calculate LCM (Least Common Multiple) using Java Program. (Code Snippet)</button>
+
+</div>
+
+<div id="2" class="tabcontent">
+<p></p>
+  <button class="accordion">1. Java program to print used different characters (letters) in a string.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="accordion">2. Java program to print table of an integer number.</button>
+<button class="accordion">3. Java program to get elapsed time in seconds and milliseconds.</button>
+<button class="accordion">4. Java program to count divisors of an integer number.</button>
+<button class="accordion">5. Java program to sort N names (strings) in ascending order.</button>
+<button class="accordion">6. Java program to count total number of words in a string.</button>
+<button class="accordion">7. Java program to print all prime numbers from 1 to N.</button>
+<button class="accordion">8. Java program to extract digits/ numbers from the string.</button>
+<button class="accordion">9. Java program to run an application - Run Exe using Java program.</button>
+<button class="accordion">10. Java program to get list of files, directories from a directory.</button>
+<button class="accordion">11. Java program to generate random numbers from 0 to given range.</button>
+<button class="accordion">12. Java program to get Host Name by IP Address.</button>
+<button class="accordion">13. Java program to get student details.</button>
+<button class="accordion">14. Java program to get current system date and time.</button>
+<button class="accordion">15. Java program to get input from user.</button>
+<button class="accordion">16. Java program to add Two Matrices.</button>
+<button class="accordion">17. Java program to Transpose a Matrix.</button>
+<button class="accordion">18. Java program to print ODD Numbers from 1 to N.</button>
+<button class="accordion">19. Java program to print EVEN Numbers from 1 to N.</button>
+<button class="accordion">20. Java program to Reverse a String.</button>
+<button class="accordion">21. Java program to Reverse a Number.</button>
+<button class="accordion">22. Java program for Palindrome Number.</button>
+<button class="accordion">23. Java program for Prime Number.</button>
+<button class="accordion">24. Java program for Factorial.</button>
+<button class="accordion">25. Java program for Fibonacci Series.</button>
+<button class="accordion">26. Java program to find Area of Triangle.</button>
+<button class="accordion">27. Java program to find Area of Rectangle.</button>
+<button class="accordion">28. Java program to find Area of Circle.</button>
+<button class="accordion">29. Java program to calculate Perimeter of Circle.</button>
+<button class="accordion">30. EMI Calculator in Java - Java program to calculate EMI.</button>
+<button class="accordion">31. Java program to calculate Simple Interest.</button>
+<button class="accordion">32. Java program to find Largest of Three Numbers.</button>
+<button class="accordion">33. Java program for Calculator.</button>
+<button class="accordion">34. Java program to Swap two numbers.</button>
+<button class="accordion">35. Java program for Addition of Two Numbers.</button>
+<button class="accordion">36. Java program to print numbers from 1 to 10 using for loop.</button>
+<button class="accordion">37. Java program to print numbers from 1 to 10 using while loop.</button>
+<button class="accordion">38. Java program to print numbers from 1 to N using for loop.</button>
+<button class="accordion">39. Java program to print numbers from 1 to N using while loop.</button>
+<button class="accordion">40. Java program to find addition and subtraction of two matrices.</button>
+<button class="accordion">41. How to accept input from keyboard in java?</button>
+<button class="accordion">42. Java program to add digits of a number.</button>
+<button class="accordion">43. Java program to addition of one dimensional and two dimensional arrays.</button>
+<button class="accordion">44. Java program to find addition of N integer numbers.</button>
+<button class="accordion">45. Java program to convert Decimal to Binary.</button>
+<button class="accordion">46. Java program to convert Decimal to Octal.</button>
+<button class="accordion">47. Java program to check whether a given number is prime or composite (non-prime).</button>
+<button class="accordion">48. Java program to check whether a given number is palindrome or not.</button>
+<button class="accordion">49. Java program to extract words from a given sentence.</button>
+</div>
+
+<div id="3" class="tabcontent">
+<p></p>
+  <button class="accordion">1. Java Method for get System UUID for Linux Machine.</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="accordion">2. Java program to print Screen Resolution.</button>
+<button class="accordion">3. Java program to get system IP Address in Windows or Linux Machine.</button>
+<button class="accordion">4. Java program to get System MAC Address of Windows or Linux Machine.</button>
+<button class="accordion">5. Java program to get System Motherboard Serial Number for Windows or Linux Machine.</button>
+<button class="accordion">6. Java program to get system Name for windows or Linux Machine.</button>
+<button class="accordion">7. Java program to get CPU Serial number for windows machine.</button>
+<button class="accordion">8. Java program to open input URL in system Default browser in windows (input URL from command prompt).</button>
+<button class="accordion">9. Java method to generate OTP (One Time Password) string.</button>
+<button class="accordion">10. Java program to print all Java properties.</button>
+<button class="accordion">11. Java program to find out prime factors of given number.</button>
+<button class="accordion">12. Java program to check whether given number is Armstrong or not.</button>
+<button class="accordion">13. Java program to convert Binary Number into Decimal Number.</button>
+<button class="accordion">14. Java program to convert Decimal Number into Binary Number.</button>
+<button class="accordion">15. Java program to convert distance from miles to kilometre and kilometre to miles.</button>
+<button class="accordion">16. Java program to find out largest integer number among three using conditional operator.</button>
+<button class="accordion">17. Java program to print multiplication table of given number.</button>
+<button class="accordion">18. Java program for bank management system.</button>
+</div>
+
+<div id="4" class="tabcontent">
+<p></p>
+  <button class="accordion">1. Print the following pattern<br>
+
+5 4 3 2 1 <br>
+4 3 2 1 <br>
+3 2 1 <br>
+2 1 <br>
+1 <br>
+</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="accordion"></button>
+<button class="accordion"></button>
+<button class="accordion"></button>
+<button class="accordion"></button>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+var acc = document.getElementsByClassName("accordion");
+var m;
+
+for (m = 0; m < acc.length; m++) {
+  acc[m].addEventListener("click", function() {
+    this.classList.toggle("active1");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+   
+</body>
+</html> 
